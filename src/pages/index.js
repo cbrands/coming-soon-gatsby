@@ -2,17 +2,23 @@ import React from "react"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
+import ArtDirectedBackground from "../components/artDirectedBackground"
+import EmailForm from "../components/EmailForm"
 
 
 const IndexPage = () => (
   <Layout>
+    <h1 className="title">We're <span className="bold">coming soon</span></h1>
+    <p className="text">
+    Hello fellow shoppers! We're currently building our new fashion store. 
+Add your email below to stay up-to-date with announcements and our launch deals.
+    </p>
+    <EmailForm/>
 
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
+
+Email Address
+
+    <ArtDirectedBackground />
   </Layout>
 )
 

@@ -4,8 +4,8 @@ import './footer.css';
 const Footer = () => (
   <footer>
     <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener noreferrer">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/cbrands/coming-soon-gatsby">Charles Brands</a>.
     </p>
   </footer>
 )
