@@ -52,6 +52,20 @@ module.exports = {
       //   // Add any options here
       // },
     },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      // options: {
+      //   rule: {
+      //     include: /assets/
+      //   }
+      // }
+    },
+    {
+      resolve: `gatsby-plugin-emotion`,
+      options: {
+        // Accepts all options defined by `babel-plugin-emotion` plugin.
+      },
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

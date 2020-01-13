@@ -14,5 +14,5 @@ body {
   font-weight: 300;
   font-size: 20px;
   text-align: center;
-
+  background-image: var(--gradient-1);
 }
