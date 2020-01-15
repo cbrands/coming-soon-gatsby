@@ -4,12 +4,12 @@ import Layout from "../components/layout"
 import ArtDirectedBackground from "../components/artDirectedBackground"
 import EmailForm from "../components/EmailForm"
 import Text from "../components/Text"
-import Icon from "../images/logo.svg";
+import Header from "../components/header";
 
 
 const IndexPage = () => (
   <Layout>
-    <Icon/>
+    <Header/>
     <ArtDirectedBackground />
     <Text/>
     <EmailForm/>

@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
-import styled from 'styled-components'
+import styled from "@emotion/styled"
  
 import BackgroundImage from 'gatsby-background-image'
  
@@ -10,7 +10,7 @@ const ArtDirectedBackground = ({ className }) => {
       query {
         mobileImage: file(relativePath: { eq: "hero-mobile.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 490, quality: 100) {
+            fluid(maxWidth: 600, quality: 100) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
@@ -31,7 +31,7 @@ const ArtDirectedBackground = ({ className }) => {
     mobileImage.childImageSharp.fluid,
     {
       ...desktopImage.childImageSharp.fluid,
-      media: `(min-width: 491px)`,
+      media: `(min-width: 601px)`,
     },
   ]
  
@@ -48,7 +48,7 @@ const ArtDirectedBackground = ({ className }) => {
  
 const StyledArtDirectedBackground = styled(ArtDirectedBackground)`
   width: 100%;
-  min-height: 300px;
+  min-height: 370px;
   /* You should set a background-size as the default value is "cover"! */
   background-size: cover;
   /* So we won't have the default "lightgray" background-color. */
