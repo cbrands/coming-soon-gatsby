@@ -10,7 +10,7 @@
     "babel-plugin-styled-components": "^1.10.6",
     "gatsby": "^2.18.12",
     "gatsby-background-image": "^0.9.12",
-    "gatsby-cli": "^2.8.26",
+    "gatsby-cli": "^2.8.27",
     "gatsby-image": "^2.2.37",
     "gatsby-plugin-emotion": "^4.1.21",
     "gatsby-plugin-manifest": "^2.2.31",
@@ -26,7 +26,6 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
-    "styled-components": "^4.4.1",
     "typescript": "^3.7.4"
   },
   "devDependencies": {

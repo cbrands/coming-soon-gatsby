@@ -1,7 +1,6 @@
 import React from 'react'
 import Icon from "../images/logo.svg";
 import styled from "@emotion/styled"
-import { css } from "@emotion/core"
 
 const Header = () => {
 
