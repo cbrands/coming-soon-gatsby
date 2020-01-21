@@ -24,11 +24,6 @@ function EmailForm(){
     setValid(isValid)
   }
 
-  function handleChange() {
-    const email = document.getElementById('email');
-    setEmail(email)
-  }
-
   const Warning = styled.p(
     {
       color: 'var(--soft-red)',
@@ -36,13 +31,18 @@ function EmailForm(){
     }
   )
 
+  const Input = styled.input(
+    {
+
+    }
+  )
+
   return (
     <form className="email-form" onSubmit={handleSubmit}>
-      <input id="email" className="email" type="text" name="email" 
-        placeholder="Your email address..." aria-label="Email input"
-        />
-      <Warning id="warning">Please provide a valid email</Warning>
+      <Input id="email" type="text" name="email" 
+        placeholder="Your email address..." aria-label="Email input"/>
       <input className="submit" type="submit" value="Notify me" aria-label="Submit button"/>
+      <Warning id="warning">Please provide a valid email</Warning>
     </form>
   );
 }
