@@ -8,6 +8,7 @@
     "@emotion/core": "^10.0.27",
     "@emotion/styled": "^10.0.27",
     "babel-plugin-styled-components": "^1.10.6",
+    "emotion-reset": "^2.0.4",
     "gatsby": "^2.18.12",
     "gatsby-background-image": "^0.9.12",
     "gatsby-cli": "^2.8.27",

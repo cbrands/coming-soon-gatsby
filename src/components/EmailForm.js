@@ -1,16 +1,21 @@
-import React, {useState} from 'react';
-import styled from "@emotion/styled"
+import React, { useState } from "react"
+import styled, { jsx, css } from "@emotion/styled"
+import IconArrow from "../images/icon-arrow.svg"
+import IconError from "../images/icon-error.svg"
+// import logo from "../images/logo_header.v108.svg"
 
-function EmailForm(){
-  const [ valid, setValid ] = useState(true)
-  const [ email, setEmail ] = useState('')
+function EmailForm() {
+  const [valid, setValid] = useState(true)
+  const [email, setEmail] = useState("")
+  // const logo = "https://duckduckgo.com/assets/logo_header.v108.svg"
 
-
+  // const IconError = "../images/icon-error.svg"
+  const error = IconError
 
   const isValid = function() {
-    const email = document.getElementById('email');
-    const re = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
-    if(re.test(email.value)){
+    const email = document.getElementById("email")
+    const re = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/
+    if (re.test(email.value)) {
       return true
     } else {
       return false
@@ -18,75 +23,77 @@ function EmailForm(){
   }
 
   function handleSubmit(event) {
-    event.preventDefault();
-    const email = document.getElementById('email');
+    event.preventDefault()
+    const email = document.getElementById("email")
     setEmail(email)
     setValid(isValid)
   }
 
-  const Warning = styled.p(
-    {
-      color: 'var(--soft-red)',
-      display: valid ? 'none' : 'block'
-    }
-  )
+  const Warning = styled.p({
+    color: "var(--soft-red)",
+    display: valid ? "none" : "block",
+    fontSize: "0.8rem",
+    marginLeft: "-8.4rem",
+    marginTop: 10,
+  })
 
-  const Input = styled.input(
-    {
+  const Input = styled.input({
+    padding: "1.2rem 8rem 1.2rem 1.6rem",
+    border: "1px solid hsl(0, 36%, 70%)",
+    background: "transparent",
+    borderRadius: 25,
+    verticalAlign: "top",
+    fontSize: "1rem",
+    "::placeholder": {
+      color: "hsl(0, 36%, 70%)",
+      opacity: 0.8,
+    },
+    ":focus": {
+      outline: 0,
+    },
+    backgroundImage: `url(${error})`,
+    // backgroundImage: `url(${logo})`,
+    backgroundPosition: "80% 50%",
+    backgroundRepeat: "no-repeat",
+  })
 
-    }
-  )
+  const Form = styled.form({
+    margin: "0 auto 4rem auto",
+  })
+
+  const Button = styled.button({
+    border: "none",
+    borderRadius: 35,
+    display: "inline-block",
+    // width: "80%",
+    display: "block",
+    cursor: "pointer",
+    marginLeft: 45,
+    verticalAlign: "middle",
+    padding: "18px 30px 18px 30px",
+    backgroundImage: "var(--gradient-2)",
+    boxShadow: "0 10px 12px var(--desaturated-red)",
+    ":focus": {
+      outline: 0,
+    },
+  })
 
   return (
-    <form className="email-form" onSubmit={handleSubmit}>
-      <Input id="email" type="text" name="email" 
-        placeholder="Your email address..." aria-label="Email input"/>
-      <input className="submit" type="submit" value="Notify me" aria-label="Submit button"/>
+    <Form className="email-form" onSubmit={handleSubmit}>
+      <Input
+        id="email"
+        type="text"
+        name="email"
+        placeholder="Email Address"
+        aria-label="Email input"
+      />
+      <Button className="submit" type="submit" aria-label="Submit button">
+        <IconArrow />
+      </Button>
+      {/* <IconError /> */}
       <Warning id="warning">Please provide a valid email</Warning>
-    </form>
-  );
+    </Form>
+  )
 }
 
-// class EmailForm extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {value: ''};
-
-//     this.handleChange = this.handleChange.bind(this);
-//     this.handleSubmit = this.handleSubmit.bind(this);
-//   }
-
-//   handleChange(event) {
-//     this.setState({value: event.target.value});
-//   }
-
-//   handleSubmit(event) {
-//     const email = document.getElementById('email');
-//     const warning = document.getElementById('warning');
-//     const re = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
-    
-//     if(!re.test(email.value)){
-//       email.classList.add('error');
-//       warning.style.visibility = 'visible';
-//     } else {
-//       email.classList.remove('error');
-//       warning.style.visibility = 'hidden';
-//     }
-//     event.preventDefault();
-//   }
-
-
-//   render() {
-//     return (
-//       <form className="email-form" onSubmit={this.handleSubmit}>
-//         <input id="email" className="email" type="text" name="email" 
-//           placeholder="Your email address..." aria-label="Email input"
-//           value={this.state.value} onChange={this.handleChange}/>
-//         <Warning id="warning">Please provide a valid email</Warning>
-//         <input className="submit" type="submit" value="Notify me" aria-label="Submit button"/>
-//       </form>
-//     );
-//   }
-// }
-
-export default EmailForm;
+export default EmailForm
