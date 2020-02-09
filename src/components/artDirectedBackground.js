@@ -1,16 +1,16 @@
-import { graphql, useStaticQuery } from 'gatsby'
-import React from 'react'
+import { graphql, useStaticQuery } from "gatsby"
+import React from "react"
 import styled from "@emotion/styled"
- 
-import BackgroundImage from 'gatsby-background-image'
- 
+
+import BackgroundImage from "gatsby-background-image"
+
 const ArtDirectedBackground = ({ className }) => {
   const { mobileImage, desktopImage } = useStaticQuery(
     graphql`
       query {
         mobileImage: file(relativePath: { eq: "hero-mobile.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 600, quality: 100) {
+            fluid(maxWidth: 800, quality: 100) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
@@ -22,7 +22,7 @@ const ArtDirectedBackground = ({ className }) => {
             }
           }
         }
-      }  
+      }
     `
   )
   // Set up the array of image data and `media` keys.
@@ -34,18 +34,17 @@ const ArtDirectedBackground = ({ className }) => {
       media: `(min-width: 601px)`,
     },
   ]
- 
+
   return (
     <BackgroundImage
       Tag={`section`}
       id={`media-test`}
       className={className}
       fluid={sources}
-    >
-    </BackgroundImage>
+    ></BackgroundImage>
   )
 }
- 
+
 const StyledArtDirectedBackground = styled(ArtDirectedBackground)`
   width: 100%;
   min-height: 370px;
@@ -55,5 +54,5 @@ const StyledArtDirectedBackground = styled(ArtDirectedBackground)`
   background-color: transparent;
   padding: 0;
 `
- 
+
 export default StyledArtDirectedBackground

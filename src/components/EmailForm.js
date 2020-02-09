@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import styled, { jsx, css } from "@emotion/styled"
 import IconArrow from "../images/icon-arrow.svg"
 import IconError from "../images/icon-error.svg"
-// import logo from "../images/logo_header.v108.svg"
 
 function EmailForm() {
   const [valid, setValid] = useState(true)
@@ -38,6 +37,7 @@ function EmailForm() {
   })
 
   const Input = styled.input({
+    display: "inline-block",
     padding: "1.2rem 8rem 1.2rem 1.6rem",
     border: "1px solid hsl(0, 36%, 70%)",
     background: "transparent",
@@ -65,16 +65,18 @@ function EmailForm() {
     border: "none",
     borderRadius: 35,
     display: "inline-block",
-    // width: "80%",
-    display: "block",
     cursor: "pointer",
-    marginLeft: 45,
+    marginLeft: -45,
     verticalAlign: "middle",
     padding: "18px 30px 18px 30px",
     backgroundImage: "var(--gradient-2)",
     boxShadow: "0 10px 12px var(--desaturated-red)",
     ":focus": {
       outline: 0,
+    },
+    ":hover": {
+      backgroundImage: "none",
+      backgroundColor: "#FAD6D6",
     },
   })
 
