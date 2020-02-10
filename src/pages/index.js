@@ -22,11 +22,9 @@ const IndexPage = () => {
     gridArea: "picture",
     minWidth: "50 vw",
     height: "100 vh",
-    border: "1px solid purple",
   })
   const Div3 = styled.div({
     textAlign: "center",
-    // width: "50%",
   })
   return (
     <>

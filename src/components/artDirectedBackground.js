@@ -48,8 +48,10 @@ const ArtDirectedBackground = ({ className }) => {
 const StyledArtDirectedBackground = styled(ArtDirectedBackground)`
   width: 100%;
   min-height: 370px;
+  height: 100vh;
   /* You should set a background-size as the default value is "cover"! */
   background-size: cover;
+  background-position: center;
   /* So we won't have the default "lightgray" background-color. */
   background-color: transparent;
   padding: 0;

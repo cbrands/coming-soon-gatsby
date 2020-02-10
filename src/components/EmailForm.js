@@ -62,6 +62,12 @@ function EmailForm() {
     margin: "0 auto 4rem auto",
     display: "inline-block",
     border: "red 1px solid",
+    "@media(min-width: 800px)": {
+      marginRight: "auto",
+      marginLeft: "auto",
+      width: "70%",
+      textAlign: "left",
+    },
   })
 
   const Button = styled.button({

@@ -13,7 +13,8 @@ const Text = () => {
     "@media(min-width: 800px)": {
       marginRight: "auto",
       marginLeft: "auto",
-      width: "60%",
+      width: "70%",
+      textAlign: "left",
     },
   })
 
@@ -23,6 +24,12 @@ const Text = () => {
     textTransform: "uppercase",
     letterSpacing: 20,
     marginTop: 90,
+    "@media(min-width: 800px)": {
+      marginRight: "auto",
+      marginLeft: "auto",
+      width: "70%",
+      textAlign: "left",
+    },
   })
 
   const Span = styled.span({
@@ -33,8 +40,6 @@ const Text = () => {
   const Div = styled.div({
     gridArea: "text",
     display: "inline-block",
-    // width: "50%",
-    border: "1px solid green",
   })
 
   return (

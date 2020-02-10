@@ -10,8 +10,13 @@ const Header = () => {
     textAlign: "left",
     gridArea: "header",
     display: "inline-block",
-    // width: "50%",
-    border: "1px solid blue",
+    "@media(min-width: 800px)": {
+      marginRight: "auto",
+      marginLeft: "auto",
+      width: "70%",
+      textAlign: "left",
+      paddingLeft: 0,
+    },
   })
 
   return (
