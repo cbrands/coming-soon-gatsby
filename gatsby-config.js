@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/coming-soon-gatsby",
   siteMetadata: {
     title: `Gatsby Default Starter`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
@@ -33,9 +34,8 @@ module.exports = {
         fonts: [
           {
             family: `Josefin Sans`,
-            variants: [`300`, `400`, `600`]
+            variants: [`300`, `400`, `600`],
           },
-
         ],
       },
     },
@@ -47,7 +47,7 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-react-svg',
+      resolve: "gatsby-plugin-react-svg",
       // options: {
       //   rule: {
       //     include: /assets/
@@ -59,7 +59,7 @@ module.exports = {
       options: {
         // Accepts all options defined by `babel-plugin-emotion` plugin.
       },
-    }
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
