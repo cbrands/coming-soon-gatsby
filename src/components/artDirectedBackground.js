@@ -3,8 +3,8 @@ import React from "react"
 import styled from "@emotion/styled"
 
 import BackgroundImage from "gatsby-background-image"
-// import heroMobile from "../images/hero-mobile.jpg"
-// import heroDesktop from "../images/hero-desktop.jpg"
+import heroMobile from "../images/hero-mobile.jpg"
+import heroDesktop from "../images/hero-desktop.jpg"
 
 const ArtDirectedBackground = ({ className }) => {
   const { mobileImage, desktopImage } = useStaticQuery(
