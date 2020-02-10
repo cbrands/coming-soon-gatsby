@@ -50,7 +50,8 @@ const StyledArtDirectedBackground = styled(ArtDirectedBackground)`
   height: 370px;
   max-height: 370px;
   @media (min-width: 800px) {
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     max-height: 100vh;
   }
 
@@ -60,7 +61,7 @@ const StyledArtDirectedBackground = styled(ArtDirectedBackground)`
   /* So we won't have the default "lightgray" background-color. */
   background-color: transparent;
   padding: 0;
-  // margin: 0;
+  margin: 0;
 `
 
 export default StyledArtDirectedBackground

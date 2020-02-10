@@ -7,6 +7,7 @@ import EmailForm from "../components/EmailForm"
 import Text from "../components/Text"
 import Header from "../components/header"
 import styled from "@emotion/styled"
+import { Helmet } from "react-helmet"
 
 const IndexPage = () => {
   const Div = styled.div({
@@ -20,11 +21,12 @@ const IndexPage = () => {
   })
   const Div2 = styled.div({
     gridArea: "picture",
-    // minWidth: "50 vw",
     height: 370,
     "@media(min-width: 800px)": {
       height: "100vh",
     },
+    margin: 0,
+    padding: 0,
   })
   const Div3 = styled.div({
     textAlign: "center",
@@ -61,6 +63,12 @@ const IndexPage = () => {
           }
         `}
       />
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>coming soon gatsby</title>
+        <meta name="description" content="gatsby test site" />
+        <meta name="keywords" cpntent="gatsby, react, emotion css" />
+      </Helmet>
       <Layout>
         <Div>
           <Header />
