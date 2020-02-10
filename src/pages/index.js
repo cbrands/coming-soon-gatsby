@@ -23,7 +23,7 @@ const IndexPage = () => {
     gridArea: "picture",
     height: 370,
     "@media(min-width: 800px)": {
-      height: "100vh",
+      height: "98vh",
     },
     margin: 0,
     padding: 0,
