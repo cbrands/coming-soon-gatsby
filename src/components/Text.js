@@ -10,6 +10,11 @@ const Text = () => {
     marginTop: 30,
     marginBottom: 50,
     lineHeight: 1.6,
+    "@media(min-width: 800px)": {
+      marginRight: "auto",
+      marginLeft: "auto",
+      width: "60%",
+    },
   })
 
   const H1 = styled.h1({
@@ -25,8 +30,15 @@ const Text = () => {
     color: "var(--desaturated-red)",
   })
 
+  const Div = styled.div({
+    gridArea: "text",
+    display: "inline-block",
+    // width: "50%",
+    border: "1px solid green",
+  })
+
   return (
-    <>
+    <Div>
       <H1 className="title">
         <Span>We're</Span>
         <br />
@@ -39,7 +51,7 @@ const Text = () => {
         Add your email below to stay up-to-date with announcements and our
         launch deals.
       </P>
-    </>
+    </Div>
   )
 }
 

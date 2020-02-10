@@ -58,7 +58,10 @@ function EmailForm() {
   })
 
   const Form = styled.form({
+    gridArea: "form",
     margin: "0 auto 4rem auto",
+    display: "inline-block",
+    border: "red 1px solid",
   })
 
   const Button = styled.button({

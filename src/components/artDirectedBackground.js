@@ -53,6 +53,7 @@ const StyledArtDirectedBackground = styled(ArtDirectedBackground)`
   /* So we won't have the default "lightgray" background-color. */
   background-color: transparent;
   padding: 0;
+  margin: 0;
 `
 
 export default StyledArtDirectedBackground
