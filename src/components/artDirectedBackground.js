@@ -52,7 +52,7 @@ const StyledArtDirectedBackground = styled(ArtDirectedBackground)`
   @media (min-width: 800px) {
     width: 99%;
     height: 99%;
-    max-height: 100vh;
+    max-height: 100%;
   }
 
   /* You should set a background-size as the default value is "cover"! */
