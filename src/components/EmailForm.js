@@ -34,6 +34,9 @@ function EmailForm() {
     fontSize: "0.8rem",
     marginLeft: "-8.4rem",
     marginTop: 10,
+    "@media(min-width: 800px)": {
+      marginLeft: "1.8rem",
+    },
   })
 
   const Input = styled.input({
@@ -55,13 +58,17 @@ function EmailForm() {
     // backgroundImage: `url(${logo})`,
     backgroundPosition: "80% 50%",
     backgroundRepeat: "no-repeat",
+    "@media(min-width: 800px)": {
+      marginLeft: 0,
+      marginRight: 0,
+      width: "90%",
+    },
   })
 
   const Form = styled.form({
     gridArea: "form",
     margin: "0 auto 4rem auto",
     display: "inline-block",
-    border: "red 1px solid",
     "@media(min-width: 800px)": {
       marginRight: "auto",
       marginLeft: "auto",

@@ -20,8 +20,11 @@ const IndexPage = () => {
   })
   const Div2 = styled.div({
     gridArea: "picture",
-    minWidth: "50 vw",
-    height: "100 vh",
+    // minWidth: "50 vw",
+    height: 370,
+    "@media(min-width: 800px)": {
+      height: "100vh",
+    },
   })
   const Div3 = styled.div({
     textAlign: "center",
