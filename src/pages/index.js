@@ -11,6 +11,14 @@ import HeroMobile from "../images/hero-mobile.jpg"
 import HeroDesktop from "../images/hero-desktop.jpg"
 
 const IndexPage = () => {
+  let defaultHeight
+  let defaultWidth
+
+  if (typeof window !== `undefined`) {
+    defaultHeight = window.innerHeight
+    defaultWidth = window.innerWidth
+  }
+
   function debounce(fn, ms) {
     let timer
     return _ => {
@@ -23,8 +31,8 @@ const IndexPage = () => {
   }
 
   const [dimensions, setDimensions] = React.useState({
-    height: window.innerHeight,
-    width: window.innerWidth,
+    height: defaultHeight,
+    width: defaultWidth,
   })
 
   React.useEffect(() => {
