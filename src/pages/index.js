@@ -118,6 +118,7 @@ const IndexPage = () => {
         <title>coming soon gatsby</title>
         <meta name="description" content="gatsby test site" />
         <meta name="keywords" content="gatsby, react, emotion css" />
+        <html lang="en" />
       </Helmet>
       <Layout>
         <Div>
