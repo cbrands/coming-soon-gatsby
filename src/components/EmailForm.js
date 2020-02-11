@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import styled, { jsx, css } from "@emotion/styled"
+import styled from "@emotion/styled"
 import IconArrow from "../images/icon-arrow.svg"
 import IconError from "../images/icon-error.svg"
 
